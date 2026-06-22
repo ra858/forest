@@ -12,15 +12,16 @@
     <fr:meta name="email">jb30@uchicago.edu</fr:meta>
   </fr:frontmatter>
   <fr:mainmatter>
-    <html:p>The stricter the limits a man sets for himself, the more closely he approaches the eternal. <html:strong>- Stefan Zweig</html:strong></html:p>
-    <html:p>I am currently an undergraduate student at the University of Chicago majoring in math.</html:p>
+    <html:p><html:em>The stricter the limits a man sets for himself, the more closely he approaches the eternal.</html:em> 
+- Stefan Zweig
+  I am currently an undergraduate student at the University of Chicago majoring in math.</html:p>
     <fr:tree show-metadata="false">
       <fr:frontmatter>
         <fr:authors />
         <fr:title text="Writings">Writings</fr:title>
       </fr:frontmatter>
       <fr:mainmatter>
-        <html:ul />
+        <html:ol />
       </fr:mainmatter>
     </fr:tree>
   </fr:mainmatter>
