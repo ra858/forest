@@ -6,17 +6,16 @@
     <fr:uri>https://ra858.github.io/forest/ra858/</fr:uri>
     <fr:display-uri>ra858</fr:display-uri>
     <fr:route>/forest/ra858/</fr:route>
-    <fr:title text="ra858">ra858</fr:title>
+    <fr:title text="Ra858">Ra858</fr:title>
     <fr:taxon>Person</fr:taxon>
-    <fr:meta name="institution">uchicago</fr:meta>
-    <fr:meta name="email">jb30@uchicago.edu</fr:meta>
+    <fr:meta name="institution">University of Chicago</fr:meta>
+    <fr:meta name="position">Undergraduate Student</fr:meta>
   </fr:frontmatter>
   <fr:mainmatter>
     <html:p>
       <html:em>The stricter the limits a man sets for himself, the more closely he approaches the eternal.</html:em>
     </html:p>
     <html:p>- Stefan Zweig</html:p>
-    <html:p>I am currently an undergraduate student at the University of Chicago majoring in math.</html:p>
     <fr:tree show-metadata="false">
       <fr:frontmatter>
         <fr:authors />

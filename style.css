@@ -1,79 +1,37 @@
+
 /* SPDX-License-Identifier: CC0-1.0 */
-
-.katex {
- font-size: 1.15em !important;
-}
-
-/* inria-sans-300 - latin_latin-ext */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inria Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url('fonts/inria-sans-v14-latin_latin-ext-300.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* inria-sans-300italic - latin_latin-ext */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inria Sans';
-  font-style: italic;
-  font-weight: 300;
-  src: url('fonts/inria-sans-v14-latin_latin-ext-300italic.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* inria-sans-regular - latin_latin-ext */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inria Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/inria-sans-v14-latin_latin-ext-regular.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* inria-sans-italic - latin_latin-ext */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inria Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: url('fonts/inria-sans-v14-latin_latin-ext-italic.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* inria-sans-700 - latin_latin-ext */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inria Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: url('fonts/inria-sans-v14-latin_latin-ext-700.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* inria-sans-700italic - latin_latin-ext */
-@font-face {
-  font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inria Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: url('fonts/inria-sans-v14-latin_latin-ext-700italic.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
 
 :root {
   --content-gap: 15px;
   --radius: 5px;
+  --font: "NCM", "NewComputerModern10", "New Computer Modern", "Source Han Serif SC VF", "Noto Serif SC", serif;
+  --monospace: "Computer Modern Typewriter", monospace;
 }
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font);
+  text-underline-position: from-font;
+  font-size: 12pt;
+  /* Subtly make it thicker */
+  /* -webkit-text-stroke-width: 0.25pt; */
+  font-weight: 450;
+  line-height: 1.5em;
+  hyphens: auto;
+  overflow-x: hidden;
+}
+
+/* .tree-content {
+  text-align: justify;
+  word-spacing: -0.05em;
+} 
+
+summary {
+  text-align: initial;
+} */
 
 h1,
 h2,
@@ -83,12 +41,7 @@ h5,
 h6 {
   line-height: 1.2;
   margin-bottom: 0;
-}
-
-h5,
-h6,
-p {
-  margin-top: 0;
+  font-weight: 600;
 }
 
 h1,
@@ -98,13 +51,45 @@ h4 {
   margin-top: .5em;
 }
 
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.8em;
+}
+
+p {
+  text-indent: 2ch;
+  margin-top: 0;
+  margin-bottom: 0.4em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p:empty {
+  margin: 0;
+}
+
+strong {
+  font-weight: 600;
+}
+
 pre,
-img,
-.katex-display,
 section,
 center {
   overflow-y: hidden;
 }
+
+.katex-display,
+img.embedded-tex {
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* See https://www.brunildo.org/test/Overflowxy2.html
+  if this is set to visible, then it will have scroll-bars. */
+}
+
+.katex-display { margin: 0.4em 0 !important }
 
 pre {
   border-radius: var(--radius);
@@ -121,24 +106,11 @@ pre {
 }
 
 code {
+  font-family: var(--monospace);
   border-radius: var(--radius);
   background-color: rgba(0, 100, 100, 0.04);
   padding: 0.2em;
   font-size: 0.9em;
-}
-
-body {
-  font-family: "Inria Sans";
-  font-size: 12pt;
-  line-height: 1.55;
-}
-
-math {
- font-size: 1.12em;
-}
-
-mrow:hover {
- background-color: rgba(0, 100, 255, 0.04);
 }
 
 .logo {
@@ -163,7 +135,6 @@ article>section>details>summary>header>h1>.taxon {
   display: block;
   font-size: .9em;
   color: #888;
-  padding-bottom: 5pt;
 }
 
 section section[data-taxon="Reference"]>details>summary>header>h1>.taxon,
@@ -183,40 +154,12 @@ footer h2 {
   display: inline;
 }
 
-@media only screen and (max-width: 1000px) {
-  body {
-    margin-top: 1em;
-    margin-left: .5em;
-    margin-right: .5em;
-    transition: ease all .2s;
-  }
-
-  #grid-wrapper>nav {
-    display: none;
-    transition: ease all .2s;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  body {
-    margin-top: 2em;
-    margin-left: 2em;
-    transition: ease all .2s;
-  }
-
-  #grid-wrapper {
-    display: grid;
-    grid-template-columns: 90ex;
-  }
-}
-
 body>header {
   margin-bottom: 0.5em;
 }
 
 #grid-wrapper>article {
-  max-width: 90ex;
-  margin-right: auto;
+  max-width: 40em;
   grid-column: 1;
 }
 
@@ -233,7 +176,7 @@ a.heading-link {
 }
 
 details h1 {
-  font-size: 13pt;
+  font-size: 12pt;
   display: inline;
 }
 
@@ -245,7 +188,6 @@ span.taxon {
   color: #444;
   font-weight: bolder;
 }
-
 
 .link-list>section>details>summary>header h1 {
   font-size: 12pt;
@@ -270,22 +212,24 @@ article>section>details>summary>header {
   margin-bottom: .5em;
 }
 
-section.block>details {
-  margin-bottom: 0.4em;
-}
-
-
-section.block>details[open] {
-  margin-bottom: 1em;
-}
-
-
-.link-list>section.block>details {
-  margin-bottom: .25em;
+section.block>details:not(:last-child) {
+  margin-bottom: 0.3em;
 }
 
 nav#toc {
   margin-left: 1em;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+nav#toc>div {
+  width: fit-content;
+  overflow-x: auto;
+}
+
+nav#toc .block {
+  border: 0pt;
+  background-color: initial;
 }
 
 nav#toc h1 {
@@ -304,12 +248,19 @@ nav#toc .link {
 }
 
 nav#toc a.bullet {
- opacity: 0.7;
- margin-left: 0.4em;
- margin-right: 0.3em;
- padding-left: 0.2em;
- padding-right: 0.2em;
- text-decoration: none;
+  opacity: 0.7;
+  margin-left: 0.4em;
+  margin-right: 0.3em;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  border: 1px solid #555;
+}
+
+nav#toc a.bullet:hover {
+  background-color: rgba(0, 100, 255, .2)
 }
 
 nav#toc h2 {
@@ -318,6 +269,13 @@ nav#toc h2 {
 
 nav#toc ul {
   list-style-type: none;
+  margin: auto;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
+nav#toc ul:empty {
+  display: none;
 }
 
 nav#toc li > ul {
@@ -328,12 +286,34 @@ nav#toc li {
  list-style-position: inside;
 }
 
+.katex {
+  font-size: 1em !important;
+  -webkit-text-stroke-width: 0pt;
+
+  /* Simple hack to get a font. Maybe we can read the context for more variations. */
+  .cjk_fallback {
+    font-family: "Source Han Serif SC VF"
+  }
+}
+
 .block {
-  border-radius: var(--radius)
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: all .2s ease-in;
+  overflow: hidden;
+}
+
+.block:first-child {
+  margin-top: 0.3em;
+}
+
+.block:not(:last-child) {
+  margin-bottom: 0.5em;
 }
 
 .block:hover {
   background-color: rgba(0, 100, 255, 0.04);
+  border: 1px solid rgb(0, 100, 255, .5);
 }
 
 .block.highlighted {
@@ -353,41 +333,92 @@ nav#toc li {
 
 .slug,
 .doi,
-.orcid {
+.orcid,
+.edit-button,
+.link.raw,
+.link.github,
+.link.mastodon,
+.link.email,
+.meta-item .link.external {
   color: gray;
   font-weight: 200;
+  font-family: var(--monospace);
+  hyphenate-character: "";
 }
 
-.edit-button {
-  color: rgb(180, 180, 180);
-  font-weight: 200;
+.doi, .orcid, .link.raw,
+.link.github,
+.link.mastodon,
+.link.email,
+.meta-item .link.external {
+  line-break: anywhere;
+}
+
+.link.local a .slug {
+  color: inherit;
+  -webkit-text-stroke-width: 0;
 }
 
 .block {
-  padding-left: 5px;
-  padding-right: 10px;
-  padding-bottom: 2px;
-  border-radius: 5px;
+  padding-left: 0.3em;
+  padding-right: 0.25em;
+  margin-bottom: var(--radius);
 }
 
-.link.external {
-  text-decoration: underline;
-}
-
+.link.external,
 a.link.local,
 .link.local a,
-a.slug {
-  box-shadow: none;
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
- }
+a.slug,
+.link.github,
+.link.mastodon,
+.link.email {
+  text-decoration: underline #11222255;
+  -webkit-text-decoration: underline #11222255;
+  text-decoration-thickness: 1px;
+}
+
+.link.external:not(.tag *)::after,
+.link.github::after,
+.link.mastodon::after,
+.link.email::after {
+  background-size: 100% 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: text-top;
+  margin-top: 0.2em;
+  margin-left: 1pt;
+}
+
+.link.external:not(.tag *)::after {
+  background-image: url("link-external.svg");
+  height: 0.7em;
+  width: 0.7em;
+}
+
+.link.github::after {
+  background-image: url("github.svg");
+  height: 0.9em;
+  width: 0.9em;
+  margin-left: 3pt;
+  margin-top: 0.1em;
+}
+
+.link.email::after {
+  background-image: url("email.svg");
+  height: 0.75em;
+  width: 0.8em;
+  margin-top: -0.1em;
+}
+
+.link.mastodon::after {
+  background-image: url("mastodon.svg");
+  height: 1em;
+  width: 1em;
+  margin-top: 0.1em;
+}
 
 ninja-keys::part(ninja-action) {
   white-space: nowrap;
-}
-
-body {
-  hyphens: auto;
 }
 
 table {
@@ -434,7 +465,7 @@ td.macro-doc {
 }
 
 [aria-label][role~="tooltip"]::after {
-  font-family: "Inria Sans";
+  font-family: var(--font);
 }
 
 .tooltip {
@@ -509,10 +540,15 @@ blockquote {
 }
 
 a.slug:hover,
-a.bullet:hover,
 .edit-button:hover,
 .link:hover {
   background-color: rgba(0, 100, 255, .1);
+}
+
+
+
+a.bullet:hover {
+  color: black;
 }
 
 .link {
@@ -536,23 +572,25 @@ blockquote {
   font-style: italic;
 }
 
-
-
 address {
   display: inline;
 }
 
-
 .metadata ul {
   padding-left: 0;
   display: inline;
+  line-height: 0pt;
 }
 
-.metadata li::after {
+.metadata ul:not(:empty) {
+  padding-block-start: 0.3em;
+}
+
+.metadata li::before {
   content: " · ";
 }
 
-.metadata li:last-child::after {
+.metadata li:first-child::before {
   content: "";
 }
 
@@ -563,6 +601,12 @@ address {
 img {
   object-fit: cover;
   max-width: 100%;
+}
+
+span.tikz {  /* tikzcd blocks also has a tikz tag */
+  display: block;
+  text-align: center;
+  text-indent: 0;
 }
 
 figure {
@@ -589,6 +633,7 @@ hr {
 
 ul, ol {
  padding-bottom: .5em;
+ margin: auto;
 }
 
 ol {
@@ -621,4 +666,59 @@ ol li ol li ol {
 .info {
  background-color: #bbb;
  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    margin-top: 1em;
+    margin-left: 0.3em;
+    margin-right: 0;
+    transition: ease all .2s;
+  }
+
+  #grid-wrapper {
+    margin-right: 0.2em;
+  }
+
+  #grid-wrapper>nav {
+    display: none;
+    transition: ease all .2s;
+  }
+
+  #grid-wrapper>article {
+    max-width: none;
+  }
+
+  .block {
+    margin-right: -0.5em;
+    padding-right: 0.5em;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .block:hover {
+    border-right: 0;
+  }
+
+  body {
+    -webkit-text-stroke-width: 0.25pt;
+  }
+
+  span.tikzcd img {
+    filter: url('#filter');
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    margin-top: 2em;
+    margin-left: 2em;
+    transition: ease all .2s;
+  }
+
+  #grid-wrapper {
+    display: grid;
+    grid-template-columns: 90ex;
+  }
 }
