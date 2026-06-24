@@ -6,14 +6,30 @@
     <fr:uri>https://ra858.github.io/forest/ra858/</fr:uri>
     <fr:display-uri>ra858</fr:display-uri>
     <fr:route>/forest/ra858/</fr:route>
-    <fr:title text="Other">Other</fr:title>
+    <fr:title text="ra858">ra858</fr:title>
     <fr:taxon>Person</fr:taxon>
     <fr:meta name="institution">University of Chicago</fr:meta>
     <fr:meta name="position">Undergraduate Student</fr:meta>
   </fr:frontmatter>
-  <fr:mainmatter><html:p><html:em>The stricter the limits a man sets for himself, the more closely he approaches the eternal.</html:em> - Stefan Zweig</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="Writings">Writings</fr:title></fr:frontmatter><fr:mainmatter><html:ol /></fr:mainmatter></fr:tree>\subtrees{
-    
-  }</fr:mainmatter>
+  <fr:mainmatter>
+    <html:p><html:em>The stricter the limits a man sets for himself, the more closely he approaches the eternal.</html:em> - Stefan Zweig</html:p>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Writings">Writings</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter>
+        <html:ol />
+      </fr:mainmatter>
+    </fr:tree>
+    <fr:tree show-metadata="false">
+      <fr:frontmatter>
+        <fr:authors />
+        <fr:title text="Other">Other</fr:title>
+      </fr:frontmatter>
+      <fr:mainmatter />
+    </fr:tree>
+  </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
