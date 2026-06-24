@@ -3,17 +3,19 @@
 <fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/forest/">
   <fr:frontmatter>
     <fr:authors />
-    <fr:uri>https://ra858.github.io/forest/ra858/</fr:uri>
-    <fr:display-uri>ra858</fr:display-uri>
-    <fr:route>/forest/ra858/</fr:route>
-    <fr:title text="Other">Other</fr:title>
-    <fr:taxon>Person</fr:taxon>
-    <fr:meta name="institution">University of Chicago</fr:meta>
-    <fr:meta name="position">Undergraduate Student</fr:meta>
+    <fr:uri>https://ra858.github.io/forest/clearing/</fr:uri>
+    <fr:display-uri>clearing</fr:display-uri>
+    <fr:route>/forest/clearing/</fr:route>
+    <fr:title text="A Clearing">A Clearing</fr:title>
   </fr:frontmatter>
-  <fr:mainmatter><html:p><html:em>The stricter the limits a man sets for himself, the more closely he approaches the eternal.</html:em> - Stefan Zweig</html:p><fr:tree show-metadata="false"><fr:frontmatter><fr:authors /><fr:title text="Writings">Writings</fr:title></fr:frontmatter><fr:mainmatter><html:ol /></fr:mainmatter></fr:tree>\subtrees{
-    
-  }</fr:mainmatter>
+  <fr:mainmatter>
+    <html:p>You happen upon a clearing in the forest. The sun is beautiful, and the grass is soft.. Take a rest here?</html:p>
+    <html:ul>
+      <html:li>
+        <fr:link href="https://www.ra858.github.io/forest/ana-0001.tree" type="external">Analysis</fr:link>
+      </html:li>
+    </html:ul>
+  </fr:mainmatter>
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
