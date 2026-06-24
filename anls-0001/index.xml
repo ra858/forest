@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/forest/default.xsl"?>
-<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="true" base-url="/forest/">
+<fr:tree xmlns:fr="http://www.forester-notes.org" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" root="false" base-url="/forest/">
   <fr:frontmatter>
     <fr:authors />
-    <fr:uri>https://ra858.github.io/forest/clearing/</fr:uri>
-    <fr:display-uri>clearing</fr:display-uri>
-    <fr:route>/forest/clearing/</fr:route>
-    <fr:title text="A Clearing">A Clearing</fr:title>
+    <fr:uri>https://ra858.github.io/forest/anls-0001/</fr:uri>
+    <fr:display-uri>anls-0001</fr:display-uri>
+    <fr:route>/forest/anls-0001/</fr:route>
+    <fr:title text="Analysis notes">Analysis notes</fr:title>
   </fr:frontmatter>
-  <fr:mainmatter>
-    <html:p>You happen upon a clearing in the forest. The sun is beautiful, and the grass is soft.. Take a rest here?</html:p>
-    <html:ul>
-      <html:li>
-        <fr:link href="https://www.ra858.github.io/forest/ana-0001/index.xml" type="external">Analysis</fr:link>
-      </html:li>
-    </html:ul>
-  </fr:mainmatter>
+  <fr:mainmatter />
   <fr:backmatter>
     <fr:tree show-metadata="false" hidden-when-empty="true">
       <fr:frontmatter>
