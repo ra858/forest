@@ -1,12 +1,14 @@
-\title {Ra858}
+\title {ra858}
 \taxon {Person}
 \meta{institution}{University of Chicago}
 \meta{position}{Undergraduate Student}
-\p{\em{The stricter the limits a man sets for himself, the more closely he approaches the eternal.}}
-\p{- Stefan Zweig}
+\p{\em{The stricter the limits a man sets for himself, the more closely he approaches the eternal.} - Stefan Zweig}
 
 \subtree{
   \title{Writings}
   \ol{
     }
 }
+\subtrees{
+    \title{Other}
+  }
