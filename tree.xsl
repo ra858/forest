@@ -10,8 +10,11 @@
     <html xmlns="http://www.w3.org/1999/xhtml" data-base-url="{/f:tree/@base-url}">
       <head>
         <meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="favicon.ico" />
         <link rel="stylesheet" href="{/f:tree/@base-url}style.css" />
         <link rel="stylesheet" href="{/f:tree/@base-url}katex.min.css" />
+        <link rel="stylesheet" href="{/f:tree/@base-url}computer-modern.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-source-han-serif-sc-vf@1.0.9/font.min.css"/>
         <script type="text/javascript">
           <xsl:if test="/f:tree/f:frontmatter/f:source-path">
             <xsl:text>window.sourcePath = '</xsl:text>
@@ -26,6 +29,17 @@
       </head>
       <body>
         <ninja-keys placeholder="Start typing a note title or ID"></ninja-keys>
+        <svg xmlns="http://www.w3.org/2000/svg" height="0">
+          <filter id="filter">
+            <feColorMatrix
+              in="SourceGraphic"
+              type="luminanceToAlpha" />
+            <feComponentTransfer result="mask">
+              <feFuncA type="gamma" amplitude="1" exponent="50" offset="0" />
+            </feComponentTransfer>
+            <feComposite in="SourceGraphic" in2="mask" operator="out" />
+          </filter>
+        </svg>
         <xsl:if test="not(/f:tree[@root = 'true'])">
           <header class="header">
             <nav class="nav">
@@ -156,7 +170,6 @@
               </xsl:attribute>
             </xsl:otherwise>
           </xsl:choose>
-          <xsl:text>■</xsl:text>
         </a>
         <span class="link local" data-target="#{generate-id(..)}">
           <span class="taxon">
@@ -243,6 +256,9 @@
           <xsl:apply-templates select="f:meta[@name='doi']" />
           <xsl:apply-templates select="f:meta[@name='orcid']" />
           <xsl:apply-templates select="f:meta[@name='external']" />
+          <xsl:apply-templates select="f:meta[@name='email']" />
+          <xsl:apply-templates select="f:meta[@name='mastodon']" />
+          <xsl:apply-templates select="f:meta[@name='github']" />
           <xsl:apply-templates select="f:meta[@name='slides']" />
           <xsl:apply-templates select="f:meta[@name='video']" />
         </ul>
@@ -298,7 +314,7 @@
               <xsl:value-of select="@number" />
             </xsl:when>
             <xsl:otherwise>
-              <xsl:value-of select="$fallback-number" />
+              <span class="slug"><xsl:value-of select="$fallback-number" /></span>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:otherwise>
@@ -308,9 +324,9 @@
 
   <xsl:template match="f:contextual-number[@uri]">
     <xsl:variable name="fallback-number">
-      <xsl:text>[</xsl:text>
-      <xsl:value-of select="@display-uri" />
-      <xsl:text>]</xsl:text>
+        <xsl:text>[</xsl:text>
+        <xsl:value-of select="@display-uri" />
+        <xsl:text>]</xsl:text>
     </xsl:variable>
 
     <xsl:choose>
@@ -321,7 +337,9 @@
         </xsl:apply-templates>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:value-of select="$fallback-number" />
+        <span class="slug">
+          <xsl:value-of select="$fallback-number" />
+        </span>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
