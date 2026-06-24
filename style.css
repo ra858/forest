@@ -31,10 +31,12 @@
   font-weight: 700;
   font-style: italic;
 }
-
 :root {
   --content-gap: 15px;
   --radius: 5px;
+  --font: "NCM", serif;
+  --monospace: "CMU Typewriter Text", monospace;
+  --secondary: #888;
 }
 
 h1,
