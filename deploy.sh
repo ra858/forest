@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-rm -rf build/ output/
+rm -rf build/output/
 forester build forest.toml
 
 cd ../forest-deploy
@@ -11,6 +11,7 @@ git clean -fxd
 cd ../forest
 cp -a ./output/forest/. ../forest-deploy
 
+cd ../forest-deploy
 git add .
 git commit -m "deploy"
 git push
