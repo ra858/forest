@@ -302,8 +302,8 @@ nav#toc li {
 }
 
 .block:hover {
-  background-color: rgb(75, 97, 168);
-  border: 1px solid rgb(143, 116, 227);
+  background-color: rgb(210, 203, 240);
+  border: 1px solid rgb(30, 16, 94);
 }
 
 .block.highlighted {
