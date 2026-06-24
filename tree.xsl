@@ -30,8 +30,8 @@
           <header class="header">
             <nav class="nav">
               <div class="logo">
-                <a href="{/f:tree/@base-url}index.html" title="Home">
-                  <xsl:text>« Home</xsl:text>
+                <a href="{/f:tree/@base-url}/clearing/index.xml" title="Clearing">
+                  <xsl:text>« Clearing</xsl:text>
                 </a>
               </div>
             </nav>
