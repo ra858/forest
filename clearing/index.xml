@@ -12,7 +12,7 @@
     <html:p>You happen upon a clearing in the forest. The sun is beautiful, and the grass is soft.. Take a rest here?</html:p>
     <html:ul>
       <html:li>
-        <fr:link href="https://www.ra858.github.io/forest/ana-0001.tree" type="external">Analysis</fr:link>
+        <fr:link href="https://www.ra858.github.io/forest/ana-0001/index.xml" type="external">Analysis</fr:link>
       </html:li>
     </html:ul>
   </fr:mainmatter>
